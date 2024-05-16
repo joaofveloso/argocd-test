@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: git@github.com:joaofveloso/argocd-test.git
-  targetRevision: HEAD
-  path: infra
+    targetRevision: HEAD
+    path: infra
 destination:
   server: https://kubernetes.default.svc
   namespace: my-app
