@@ -8,15 +8,15 @@ spec:
   source:
     repoURL: git@github.com:joaofveloso/argocd-test.git
     targetRevision: HEAD
-    path: infra
-destination:
-  server: https://kubernetes.default.svc
-  namespace: my-app
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app
 
-syncPolicy:
-  syncOptions:
-    - CreateNamespace=true
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
 
-  automated:
-    selfheal: true
-    prune: true
+    automated:
+      selfHeal: true
+      prune: true
